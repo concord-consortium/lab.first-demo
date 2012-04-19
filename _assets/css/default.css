@@ -1,23 +1,6 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
+/* CSS RESET
+------------------------------------*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0;}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
 body{line-height:1;}
 blockquote,q{quotes:none;}
@@ -25,26 +8,29 @@ blockquote:before, blockquote:after,
 q:before,q:after {content:'';content:none;}
 table{border-collapse:collapse;border-spacing:0;}
 
+/* BASIC STYLES
+------------------------------------*/
 body {
 	background: #fff;
 	color: #3f3f3f;
 	font: 100% arial, helvetica, sans-serif;
 	line-height: 140%;
 	}
-	
+b, strong { font-weight: bold; }
+em. i { font-style: italic; }
 a.button {
 	background: #f3951d;
 	border: none;
 	color: #fff;
 	font: 12px/1 arial, helvetica, sans-serif;
-	padding: 4px 14px;
+	padding: 8px 14px;
 	text-decoration: none;
 	/* CSS 3 */
-	background: -webkit-gradient(linear, left top, left bottom, from(#f3951d), to(#ec6e0d));
 	background: -moz-linear-gradient(top,  #f3951d,  #ec6e0d);
-	-moz-border-radius: 12px; /* FF1+ */
-	-webkit-border-radius: 12px; /* Saf3+, Chrome */
-	border-radius: 12px; /* Opera 10.5, IE 9 */
+	background: -webkit-gradient(linear, left top, left bottom, from(#f3951d), to(#ec6e0d));
+	-moz-border-radius: 13px;
+	-webkit-border-radius: 13px;
+	border-radius: 13px;
 	}
 	a.button:hover {
 		background: #F3951D;
@@ -53,11 +39,16 @@ a.button {
 		background: -moz-linear-gradient(top,  #f3951d,  #dd6e0d);
 		}
 
+/* CONTAINER FOR TOP HALF OF PAGE
+------------------------------------*/
 #top {
 	padding: 0 20px;
 	margin: 0 auto;
 	width: 920px;
 	}
+
+/* HEADER
+------------------------------------*/
 #header {
 	height: 75px;
 	}
@@ -69,16 +60,25 @@ a.button {
 	}
 #header p {
 	float: right;
+	margin-top: 25px;
 	text-align: right;
-	width: 40%;
+	width: 50%;
 	}
+	
+/* MAIN CONTENT AREA
+------------------------------------*/
 h1 {
+	clear: both;
 	color: #3a878b;
-	font: 3em "Museo Slab", georgia, times, 'times new roman', serif;
+	font: 3em georgia, times, 'times new roman', serif;
 	text-align: center;
 	}
+h2 {
+	color: #eb8723;
+	font: bold 1.2em georgia, times, 'times new roman', serif;
+	}
 p#sub-title {
-	font: 1.2em "Museo Sans", arial, helvetica, sans-serif;
+	font: 1.2em arial, helvetica, sans-serif;
 	margin-bottom: 1.5em;
 	text-align: center;
 	}
@@ -99,7 +99,7 @@ p#sub-title {
 	height: 600px;
 	width: 620px;
 	}
-#mw, #browser, #more {
+.box {
 	float: left;
 	font-size: .9em;
 	margin-right: 50px;
@@ -108,6 +108,7 @@ p#sub-title {
 	padding: 10px;
 	width: 240px;
 	}
+	.box a, .box h2 {color: #fff;}
 #mw {
 	background: #3a878b;
 	color: #fff;
@@ -129,9 +130,13 @@ p#sub-title {
 #subscribe {
 	background: #f4b626;
 	color: #fff;
-	height: 75px;
+	height: 25px;
+	padding: 25px 0;
 	text-align: center;
 	}
+
+/* FOOTER
+------------------------------------*/
 #footer-wrap {
 	background: #f9eec1;
 	}
@@ -140,7 +145,7 @@ p#sub-title {
 	padding: 20px;
 	width: 920px;
 	}
-#footer p {
+#footer p, #footer ul {
 	font-size: .9em;
 	margin-bottom: 1em;
 	}
